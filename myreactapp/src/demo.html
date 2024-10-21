@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Filter UI</title>
+    <!-- <link rel="stylesheet" href="styles.css" /> -->
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f4f8;
+        margin: 0;
+        padding: 20px;
+        color: #333;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      .filters-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .filter {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+        width: 300px;
+      }
+
+      h2 {
+        font-size: 18px;
+        color: #333;
+        margin-bottom: 10px;
+      }
+
+      .filter-options label {
+        display: block;
+        margin-bottom: 10px;
+        cursor: pointer;
+      }
+
+      input[type="range"] {
+        width: 100%;
+        margin: 10px 0;
+      }
+
+      .range-value {
+        text-align: center;
+        font-weight: bold;
+      }
+
+      select {
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      }
+
+      .filter-options input[type="checkbox"] {
+        margin-right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Refine Your Search</h1>
+    <div class="filters-container">
+      <!-- Filter by Policy Status -->
+      <div class="filter">
+        <h2>Filter by Policy Status</h2>
+        <div class="filter-options">
+          <label
+            ><input type="checkbox" name="status" value="active" />
+            Active</label
+          >
+          <label
+            ><input type="checkbox" name="status" value="expired" />
+            Expired</label
+          >
+        </div>
+      </div>
+
+      <!-- Filter by Renewal Date -->
+      <div class="filter">
+        <h2>Filter by Renewal Date</h2>
+        <input
+          type="range"
+          id="renewal-date"
+          min="0"
+          max="50"
+          step="5"
+          value="0"
+        />
+        <div class="range-value">
+          Expiring with in <span id="renewal-value"></span> - days.
+        </div>
+      </div>
+
+      <!-- Filter by Customer Name -->
+      <div class="filter">
+        <h2>Filter by Customer Name</h2>
+        <select name="customer" id="customer-name">
+          <option value="best_first">Customer 1</option>
+          <option value="best_last">Customer 2</option>
+          <option value="four_stars">Customer 3</option>
+          <option value="three_stars">Customer 4</option>
+        </select>
+      </div>
+    </div>
+
+    <script>
+      // Filter by Renewal Date
+      const renewalDateSlider = document.getElementById("renewal-date");
+      const renewalValue = document.getElementById("renewal-value");
+      renewalDateSlider.addEventListener("input", function () {
+        renewalValue.textContent = this.value;
+      });
+    </script>
+  </body>
+</html>

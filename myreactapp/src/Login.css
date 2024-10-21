@@ -1,0 +1,17 @@
+.login {
+  margin: 10%;
+}
+
+.heading {
+  text-align: center;
+  padding: 10px;
+  font-size: 20px;
+  color: rgb(7, 63, 137);
+}
+
+.button-1:hover,
+.button-2:hover {
+  color: rgb(7, 63, 137);
+  background-color: white;
+  border: 1px solid rgb(7, 63, 137);
+}

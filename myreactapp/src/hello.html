@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up Form</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        background-color: #0b3484;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+      }
+
+      .form-box {
+        background-color: #fff;
+        padding: 30px 40px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        width: 300px;
+        text-align: center;
+      }
+
+      h2 {
+        color: #0b3484;
+        margin-bottom: 20px;
+      }
+
+      .input-box {
+        position: relative;
+        margin-bottom: 20px;
+      }
+
+      .input-box input {
+        width: 100%;
+        padding: 10px 40px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        outline: none;
+        font-size: 16px;
+      }
+
+      .input-box .icon {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 18px;
+        color: #aaa;
+      }
+
+      .button-group {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .btn {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+        background-color: #0b3484;
+        cursor: pointer;
+        font-size: 16px;
+        width: 100px;
+      }
+
+      .btn:hover {
+        background-color: #072759;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-box">
+        <h2>Sign Up</h2>
+        <form>
+          <div class="input-box">
+            <input type="text" placeholder="Your Name" required />
+            <span class="icon">👤</span>
+          </div>
+          <div class="input-box">
+            <input type="email" placeholder="Your Email" required />
+            <span class="icon">✉</span>
+          </div>
+          <div class="input-box">
+            <input type="password" placeholder="Your Password" required />
+            <span class="icon">🔒</span>
+          </div>
+          <div class="button-group">
+            <button type="submit" class="btn">Sign Up</button>
+            <button type="button" class="btn">Login</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
