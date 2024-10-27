@@ -5,9 +5,6 @@ const FilterMenu = ({ selectFilter }) => {
         Policy Status
       </button>
       <button onClick={() => selectFilter("renewalDate")}>Renewal Date</button>
-      {/* <button onClick={() => selectFilter("customerName")}>
-        Customer Name
-      </button> */}
     </div>
   );
 };

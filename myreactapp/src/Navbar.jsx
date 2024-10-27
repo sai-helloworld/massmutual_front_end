@@ -65,13 +65,22 @@ function Navbar({ isLoggedIn, onLogout }) {
   return (
     <>
       <nav>
-        <img src={Profile} width="350px" alt="Profile logo"></img>
+        <img
+          src={Profile}
+          height="65px"
+          alt="Profile logo"
+          className="Logo"
+        ></img>
         <ul className="nav_links">
           <li>
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/policies">Policies</Link>
+            {isLoggedIn && (
+              <Link to="/policies" id="Policies">
+                Policies
+              </Link>
+            )}
           </li>
           <li>
             <Link to="/about">About</Link>
